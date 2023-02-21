@@ -5,7 +5,7 @@ const fs = require('fs');
 const { title } = require('process');
 const notesData = require('./db/db.json');
 const uuid = require('./helpers/uuid');
-const PORT = 5500;
+const PORT = process.env.PORT || 5500;
 const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -37,7 +37,7 @@ app.post('/api/notes', (req, res) => {
     const newNote = {
       title,
       text,
-      id: "uuid",
+      id: uuid(),
     };
 
     fs.readFile('./db/db.json', 'utf8', (err, data) => {

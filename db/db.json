@@ -1,17 +1,12 @@
 [
    {
-      "title": "Monday",
-      "text": "Notes",
-      "id": "uuid"
-   },
-   {
-      "title": "Tuesday",
-      "text": "notes",
-      "id": "uuid"
-   },
-   {
-      "title": "to do list",
+      "title": "To do list -Monday",
       "text": "get groceries",
-      "id": "uuid"
+      "id": "b80e"
+   },
+   {
+      "title": "School Notes",
+      "text": "...",
+      "id": "b80c"
    }
 ]
