@@ -6,7 +6,7 @@ This is a Note Taker that can be used to write and save notes.
 
 ## Screenshot
 
-![image](./assets/images/Screenshot.png)
+![image](./assets/Screenshot.png)
 
 ## Link
 
