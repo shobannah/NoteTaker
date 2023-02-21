@@ -19,15 +19,7 @@ app.get('/notes', (req, res) => {
     res.sendFile(path.join(__dirname, './public/notes.html'));
   });
   
-app.get('/api/notes', (req, res) => {res.json(notesData)
-  const { title , text } = req.body;
-  if (title && text ) {
-    const newNote = {
-      title,
-      text,
-      review_id: uuid(),
-    };
-});
+app.get('/api/notes', (req, res) => res.json(notesData));
 
 app.get('/*', (req, res) => {
     res.sendFile(path.join(__dirname, './public/index.html'));
