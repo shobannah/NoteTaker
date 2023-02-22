@@ -1,13 +1,12 @@
-const { text } = require('express');
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
-const { title } = require('process');
+
 const notesData = require('./db/db.json');
 const uuid = require('./helpers/uuid');
 const PORT = process.env.PORT || 5500;
 const app = express();
-app.use(express.urlencoded({ extended: true }));
+
 app.use(express.json());
 app.use(express.static('public'));
 
@@ -38,6 +37,8 @@ app.post('/api/notes', (req, res) => {
       title,
       text,
       id: uuid(),
+
+
     };
 
     fs.readFile('./db/db.json', 'utf8', (err, data) => {
@@ -57,7 +58,7 @@ app.post('/api/notes', (req, res) => {
             writeErr
               ? console.error(writeErr)
               : console.info('Successfully updated notes!')
-        );
+        )
       }
     });
 
@@ -66,7 +67,7 @@ app.post('/api/notes', (req, res) => {
       body: newNote,
     };
 
-    console.log(response);
+    console.log(response) ;
     res.status(201).json(response);
   } else {
     res.status(500).json('Error in posting note');
